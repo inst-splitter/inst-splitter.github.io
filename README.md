@@ -1,1 +1,0 @@
-# inst-splitter.github.io
