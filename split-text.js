@@ -34,16 +34,8 @@ function getStyle(id, styleName) {
 function splitText(text) { // название хоошее +
     const FIRST_BLOCK_SIZE = Number(getEl('first-block-size').value);
     const BLOCK_SIZE = Number(getEl('block-size').value);
-
-
-    let paragraphs = text.split('.');
-    paragraphs.pop();
-
-    for (let el of paragraphs) {
-        // заменить за for без i
-        el = el + ".";
-    }
-
+    let paragraphs = text;
+    paragraphs = paragraphs.split(/(?<=\.)/);
     let blocks = [];
     let block1 = '';
     let block2 = '';
@@ -60,11 +52,13 @@ function splitText(text) { // название хоошее +
     while (paragraphs.length > 0) {
         while ((block2 + parStart).length <= BLOCK_SIZE) {
             block2 += paragraphs.shift();
+            if (paragraphs.length === 0) {
+                break;
+            }
         }
         blocks.push(block2);
         block2 = '';
     }
-
     return blocks;
 }
 
@@ -105,6 +99,6 @@ function hideInfo() {
 function toggleTheme() {
     const themeEl = getEl("theme");
     const currentHref = themeEl.href;
-    const newTheme = currentHref.includes("dark") ? "light": "dark";
+    const newTheme = currentHref.includes("dark") ? "light" : "dark";
     themeEl.href = `theme-${newTheme}.css`;
 }

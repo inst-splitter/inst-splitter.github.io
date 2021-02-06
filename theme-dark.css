@@ -1,3 +1,165 @@
-body{
-    background-color: #2b2b2c;
+body {
+    background-color: #101010;
+    overflow: scroll;
+    margin: 0;
+}
+
+body, * {
+    font-family: Arial, sans-serif;
+}
+
+.out-all {
+    position: relative;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+#info-button {
+    display: block;
+    width: 50px;
+}
+
+#label {
+    display: flex;
+    padding: 15px 25px;
+    background-color: #101010;
+    border: 6px solid #ffebb9;
+    color: #8a8a8a;
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+.header p {
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 30px;
+    background: linear-gradient(30deg, #fde612, #f13636);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 13px 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 60vw;
+    min-width: 60vw;
+}
+
+#always-visible {
+    display: flex;
+    justify-content: left;
+    padding: 15px 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 200px;
+    background-color: #101010;
+    border: 6px solid #ffd7b9;
+    color: #8a8a8a;
+}
+
+#comments {
+    display: none;
+    justify-content: left;
+    padding: 15px 25px;
+    min-height: 200px;
+    background-color: #101010;
+    border: 6px solid #ffebb9;
+    color: #8a8a8a;
+}
+
+.btn {
+    padding: 15px 10px;
+    outline: none;
+    background: linear-gradient(360deg, #fdc212, #f18136);
+    font-size: 15px;
+    color: white;
+    border: 0px solid;
+    width: 200px;
+}
+
+.btn:hover {
+    background: linear-gradient(360deg, #efb810, #e97d35);
+    color: white;
+}
+
+input {
+    padding: 5px 10px;
+    width: 60px;
+}
+
+.input {
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+label {
+    font-family: Corbel, sans-serif;
+}
+
+#full-text {
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    display: flex;
+    padding: 15px 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #101010;
+    border: 5px solid #a7a7a7;
+    color: #8a8a8a;
+}
+
+#about-author {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 19px;
+    color: #d4d4d4;
+}
+
+.triple-flex {
+    flex: 6 6 150px;
+    margin-right: 20px;
+}
+
+#shadow {
+    display: none;
+    background-color: #000000;
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+#info-container {
+    position: relative; /* Это нужно для правильного поведения дочернего div с диалогом с position absolute */
+    min-width: 10%;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#info-dialog {
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    width: 280px;
+    height: 180px;
+    top: 90px;
+    right: 0;
+    box-shadow: 0 0 10px #626262;
+    z-index: 2;
+    padding: 10px;
 }

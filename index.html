@@ -5,7 +5,7 @@
     <title>Instagram-splitter</title>
     <script src="split-text.js"></script>
     <link rel="stylesheet" href="split-text.css" type="text/css">
-    <link id="theme" rel="stylesheet" href="theme-dark.css" type="text/css">
+    <link id="theme" rel="stylesheet" href="theme-light.css" type="text/css">
 </head>
 <body onLoad="init()" onclick="hideInfo()">
 <div class="out-all">
@@ -65,8 +65,8 @@
                 <label class="btn rounded triple-flex" for="block-size">Символов во втором блоке:
                     <input class="input" id="block-size" type="number" value="1000" min="250" step="50">
                 </label>
-                <button class="btn rounded triple-flex" id="init" onclick="init ()">
-                    Применить
+                <button class="btn rounded triple-flex" id="init" onclick="init ()" style="margin-right: 0;">
+                    <img src="img/check.svg" style="width: 25px; margin-right: 20px;margin-bottom: -2px;"><span style="font-size: 25px">Применить</span>
                 </button>
             </div>
 
