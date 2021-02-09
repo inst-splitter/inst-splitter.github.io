@@ -45,6 +45,7 @@ function splitText(text) { // название хоошее +
 
     while ((block1 + parStart).length <= FIRST_BLOCK_SIZE) {
         block1 += paragraphs.shift();
+        if (paragraphs.length === 0) break;
     }
     blocks.push(block1);
 
@@ -52,9 +53,7 @@ function splitText(text) { // название хоошее +
     while (paragraphs.length > 0) {
         while ((block2 + parStart).length <= BLOCK_SIZE) {
             block2 += paragraphs.shift();
-            if (paragraphs.length === 0) {
-                break;
-            }
+            if (paragraphs.length === 0) break;
         }
         blocks.push(block2);
         block2 = '';
@@ -99,6 +98,8 @@ function hideInfo() {
 function toggleTheme() {
     const themeEl = getEl("theme");
     const currentHref = themeEl.href;
-    const newTheme = currentHref.includes("dark") ? "light" : "dark";
-    themeEl.href = `theme-${newTheme}.css`;
+    const isOldThemeDark = currentHref.includes("dark");
+    themeEl.href = `theme-${isOldThemeDark ? "light" : "dark"}.css`;
+    const themeImg = getEl('themeImg');
+    themeImg.src = `img/${isOldThemeDark ? "moon" : "sun"}.svg`
 }

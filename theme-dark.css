@@ -76,7 +76,16 @@ body, * {
     border: 6px solid #ffebb9;
     color: #8a8a8a;
 }
+.comm {
+    padding: 15px 25px;
+    min-height: 200px;
+    background-color: #101010;
+    border: 3px solid #181818;
+    border-radius: 23px;
+    margin: 5px;
 
+    overflow: hidden;
+}
 .btn {
     padding: 15px 10px;
     outline: none;
