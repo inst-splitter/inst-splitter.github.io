@@ -78,12 +78,7 @@ function init() {
     }
 }
 
-function showComments() {
-    showEl('comments');
-    const btnEl = getEl('Btn');
-    hideEl(btnEl);
-    btnEl.innerText = 'Скрыть комментарии';
-}
+
 
 function showInfo(event) {
     showEl('shadow');

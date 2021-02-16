@@ -26,8 +26,8 @@ body, * {
 #label {
     display: flex;
     padding: 15px 25px;
-    background-color: #ffffff;
-    border: 6px solid #ffebb9;
+    background-color: #f3f3f3;
+    border: 6px solid #a7a7a7;
 }
 
 .rounded {
@@ -58,29 +58,26 @@ body, * {
     justify-content: left;
     padding: 15px 25px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     min-height: 200px;
-    background-color: #ffffff;
+    background-color: #fff3ef;
     border: 6px solid #ffd7b9;
 }
 
 #comments {
-    display: none;
+    display: block;
     justify-content: left;
-    padding: 15px 25px;
     min-height: 200px;
     background-color: #ffffff;
-    border: 6px solid #ffebb9;
 }
 
 .comm {
     padding: 15px 25px;
     min-height: 200px;
-    background-color: white;
-    border: 3px solid #f5f5f5;
+    background-color: #fff9ee;
+    border: 6px solid #ffebb9;
     border-radius: 23px;
-    margin: 5px;
-
+    margin-top: 10px;
     overflow: hidden;
 }
 
@@ -124,8 +121,8 @@ label {
     padding: 15px 25px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #ffffff;
-    border: 5px solid #a7a7a7;
+    background-color: #f3f3f3;
+    border: 6px solid #a7a7a7;
 }
 
 #about-author {
